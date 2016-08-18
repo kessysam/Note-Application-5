@@ -1,11 +1,11 @@
 var chai = require("chai");
-var index = require(../"index");
-var expect = chai.expect;
+var noteApp = require("../index");
+var assert = chai.assert;
 
-describe("The is a text cases for the function", function (x, y){
-
-		It("It sholud "){
-
-		}
-	}
-);
+describe("This is a test function,", function (author){
+	it(" should assign value to author", function() {
+		var note = new noteApp();
+		//assert.equal('Unknown Author', note.author );
+		assert.equal(note.author, 'anonymous');
+	});
+});
