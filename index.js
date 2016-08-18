@@ -1,26 +1,18 @@
 
-
-var NoteApplication = function(author, notes) {
+function NoteApplication(author) {
 	
-	if(typeof author !== 'string' || typeof notes !== 'string') {
-		return "Invalid input";
+	if(typeof author === 'undefined') {
+		this.author = 'anonymous';
+	} else {
+		this.author = author.toString();
 	}
 	
- 	var author = author;
- 	var notes = [];
+	this.notes = [];
+	
+	this.create = function(text){
+		this.notes.push(text);
+	};
+	
+}
 
- 	/**
- 	* This function takes the note content
- 	* as the parameter
- 	* and adds it to the notes list of the object.
- 	* @param {String} note_content
- 	*/
- 	var create = function(note_content) {
- 		
- 		this.notes.push(note_content.toString());
- 		return this.notes;
- 	}
-
-};
-
- module.exports = NoteApplication;
+module.exports = NoteApplication;
