@@ -29,16 +29,15 @@ function NoteApplication(author) {
  	}
 
  	/**
- 	* This function takes a parameter note_id which refers to the index of the note in the notes list.
- 	* The index is validated, and a sting is passed if the index is validz.
+ 	* This function takes a parameter note_id which refers to the index of the text in the notes list.
+ 	* The index is validated, and a string is returned if the index is valid.
  	*/
- 	getNote(note_id) {
+ 	this.getNote = function(note_id) {
  		
- 		if(this.notes.indexOf(note_id) !== -1){
- 			return this.notes[note_id];
- 		}
- 		
- 		return false;	
+ 		if(this.notes[note_id] === undefined){
+ 			return false;
+		}
+ 		return this.notes[note_id];	
  	}	
 }
 
