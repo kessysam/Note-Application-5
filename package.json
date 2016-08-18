@@ -1,0 +1,23 @@
+{
+  "name": "note-application-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kessysam/Note-Application-5.git"
+  },
+  "author": "'Samuel Kessy'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kessysam/Note-Application-5/issues"
+  },
+  "homepage": "https://github.com/kessysam/Note-Application-5#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
