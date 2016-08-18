@@ -18,16 +18,24 @@ describe("This test the create() of the created object created. ", function(auth
 	var note = new noteApp();
 
 	it(" checks if the argument passed in, is at the intended index. ", function() {
-		note.create("lsfdjbvklsjdf");
-		assert(note.notes[note.notes.length - 1], "lsfdjbvklsjdf");
-		//console.log(note);
-		//assert.equal(note.notes.length, 2);
+		note.create("Shakespare");
+		assert(note.notes[note.notes.length - 1], "Shakespare");
 	});
 
 	it(" checks if the argument passed in, is at the intended index. ", function() {
-		//note.create("lsfdjbvklsjdf");
-		//assert(note.notes[note.notes.length - 1], "lsfdjbvklsjdf");
 		console.log(note);
 		assert.equal(note.notes.length, 1);
+	});
+});
+
+
+describe("This test the list() of the created object. ", function() {
+
+	var note = new noteApp("Adam Eve");
+
+	it(" should return a list of text that has been created through, create().", function(){
+
+		note.create("a guru");
+		assert.equal(note.listNotes(), "Notes Id: " +i+"\n"+ note.notes[0] + "\n By" + " Author "+note.author);
 	});
 });
