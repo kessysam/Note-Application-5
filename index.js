@@ -27,7 +27,19 @@ function NoteApplication(author) {
  			return ("Notes Id: " +i+"\n"+ this.notes[i] + "\n By" + " Author "+this.author);		 			
  		}		
  	}
-	
+
+ 	/**
+ 	* This function takes a parameter note_id which refers to the index of the note in the notes list.
+ 	* The index is validated, and a sting is passed if the index is validz.
+ 	*/
+ 	getNote(note_id) {
+ 		
+ 		if(this.notes.indexOf(note_id) !== -1){
+ 			return this.notes[note_id];
+ 		}
+ 		
+ 		return false;	
+ 	}	
 }
 
 module.exports = NoteApplication;
