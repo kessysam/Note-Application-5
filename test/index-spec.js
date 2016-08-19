@@ -59,4 +59,17 @@ describe("This test the list() of the created object. ", function() {
 			assert.equal(note.notes.length, 2);
 		});
 	});
+
+	describe("This test the edit function. ", function(){
+
+		it("Should replace a value at a particular index", function(){
+			var note = new noteApp("Bush");
+			note.create("A wise Man");
+			note.create("A wise Woman");
+			note.create("A wise Boy");
+			note.edit(2, "Dudes");
+
+			assert.equal(note.notes[2], "Dudes");
+		});
+	});
 });

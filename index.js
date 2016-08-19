@@ -50,6 +50,17 @@ function NoteApplication(author) {
 		}
 		this.notes = this.notes.splice(note_id);
 	}
+
+	/**
+	*This function replaces the content in the note at note_id with new_content
+	*/
+	this.edit = function(note_id, new_content) {
+		
+		if(this.notes[note_id] !== undefined) {
+			this.notes[note_id] = new_content.toString();
+		}
+	}
+
 }
 
 module.exports = NoteApplication;
