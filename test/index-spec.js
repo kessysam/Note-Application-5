@@ -67,6 +67,7 @@ describe("This test the list() of the created object. ", function() {
 			note.create("A wise Man");
 			note.create("A wise Woman");
 			note.create("A wise Boy");
+			note.create("A wise Girl");
 			note.edit(2, "Dudes");
 
 			assert.equal(note.notes[2], "Dudes");
