@@ -36,13 +36,27 @@ describe("This test the list() of the created object. ", function() {
 		assert.equal(note.listNotes(), "Notes Id: " +i+"\n"+ note.notes[0] + "\n By" + " Author "+note.author);
 	});
 
-	describe("This test the getNote() of the created object. ", function(){
+	describe("This test the getNote() of the created object. ", function() {
 
 		var note = new noteApp("Clinton");
 
-		it("should return a string at a particular index . ", function(){
+		it("should return a string at a particular index . ", function() {
 			note.create("A street king");
 			assert.equal(note.getNote(0), "A street king");
+		});
+	});
+
+	describe("This test the delete function of the created object. ", function() {
+
+		var note = new noteApp();
+
+		it("should delete a text at the index of the array. ", function() {
+			note.create("A wise man");
+			note.create("A reasonable");
+			note.create("A clever child");
+			note.deleteNote(1);
+			console.log(note.notes);
+			assert.equal(note.notes.length, 2);
 		});
 	});
 });

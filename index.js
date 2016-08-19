@@ -39,6 +39,17 @@ function NoteApplication(author) {
 		}
  		return this.notes[note_id];	
  	}	
+
+ 	/**
+	*This function deletes the note at the index note_id of the notes list
+	*/
+	this.deleteNote = function(note_id) {
+
+		if(this.notes[note_id] === undefined) {
+			return false;
+		}
+		this.notes = this.notes.splice(note_id);
+	}
 }
 
 module.exports = NoteApplication;
